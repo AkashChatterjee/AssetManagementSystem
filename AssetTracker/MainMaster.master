@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMaster.master.cs" Inherits="MainMaster" EnableViewState="true" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SNFAssetTracker</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+       
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="width: 100%">
+            <div style="float:left; width:50%">
+                <asp:Image ID="Image1" runat="server" Height="74px" ImageUrl="~/resources/snulogo.jpg" Width="70%"/>
+            </div>
+            
+            <h1 style="text-align:right; width:50%; float:right; height: 72px;">Asset Management System</h1>
+                
+        <div style="background-color:#0067b3; height: 37px; clear:left">
+
+        </div>
+       <table style="width:100%; margin-top:30px">
+      <tr>
+          <td>
+
+          </td>
+          <td style="width:600px; border-bottom-style:outset; border-bottom-color:#0067b3; border-bottom-width:thin; border-right:inset; border-right-color:#0067b3; border-right-width:thin; border-bottom-right-radius:5px">      
+         <style type="text/css">
+        .menu li
+        {
+            padding-right: 20px;
+                       
+
+        }
+    </style>
+              <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" DynamicHorizontalOffset="5" DynamicVerticalOffset="10" Font-Names="Verdana" Font-Size="1.3em" ForeColor="Gray" StaticSubMenuIndent="10px" CssClass="menu">
+                  <DynamicHoverStyle ForeColor="#0067b3" />
+                  <DynamicMenuItemStyle HorizontalPadding="20px" VerticalPadding="5px"  Font-Size="0.8em"  />
+                  <DynamicMenuStyle ForeColor="Black" BackColor="White"/>
+                  <DynamicSelectedStyle BackColor="Beige" />
+                  <StaticHoverStyle ForeColor="#0067b3"/>
+                  <StaticMenuItemStyle HorizontalPadding="30px" VerticalPadding="5px"/>
+                  <StaticSelectedStyle BackColor="Beige" ForeColor="#0067b3"/>
+                  <Items>
+                      <asp:MenuItem NavigateUrl="~/MainPage.aspx" Text="Home"/>
+                      <asp:MenuItem NavigateUrl="~/Add.aspx" Text="Add" />
+                      <asp:MenuItem NavigateUrl="~/View.aspx" Text="View" />
+                      <asp:MenuItem NavigateUrl="~/Update.aspx" Text="Update" />
+                  </Items>
+              </asp:Menu>
+              
+
+          </td>
+          <td></td>
+      </tr>  
+    </table>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" EnableViewState="true">
+        
+        </asp:ContentPlaceHolder>
+        
+    </div>
+    </form>
+</body>
+</html>
